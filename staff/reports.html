@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StudNest student portal for classes, assignments and academic progress.">
+  <meta name="theme-color" content="#F7F6F2">
+  <title>StudNest | Reports & exports</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/styles.css?v=10" rel="stylesheet">
+  <link href="../assets/css/theme-academic.css?v=10" rel="stylesheet">
+</head>
+<body data-page="reports">
+<div class="app-shell" id="appShell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-column">
+    <header class="topbar">
+      <button id="menuToggle" class="icon-button menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button>
+      <div class="breadcrumb-text"><span>Menu</span><i class="bi bi-chevron-right"></i><strong id="pageCrumb">Reports & exports</strong></div>
+      <div class="topbar-right"><span class="top-date" id="todayLabel"></span><div class="top-avatar" id="topAvatar">SN</div></div>
+    </header>
+    <main class="page-content">
+
+<section>
+  <div class="welcome-row">
+    <div><h1>Reports &amp; exports</h1><p class="muted">Download class lists and progress summaries as CSV.</p></div>
+  </div>
+  <div class="content-grid report-grid">
+    <section class="panel report-card">
+      <span class="stat-icon lilac"><i class="bi bi-people"></i></span>
+      <h2>Class list</h2>
+      <p>Export students enrolled in a selected class section.</p>
+      <label for="reportSection" class="form-label">Class section</label>
+      <select id="reportSection" class="form-select mb-3"><option value="">All enrolled students</option></select>
+      <button class="btn btn-primary" id="exportClassList"><i class="bi bi-download me-2"></i>Export class list</button>
+    </section>
+    <section class="panel report-card">
+      <span class="stat-icon lilac"><i class="bi bi-graph-up"></i></span>
+      <h2>Progress summary</h2>
+      <p>Export enrolment and assessment progress by student and subject.</p>
+      <button class="btn btn-primary" id="exportProgress"><i class="bi bi-download me-2"></i>Export progress summary</button>
+    </section>
+    <section class="panel report-card">
+      <span class="stat-icon lilac"><i class="bi bi-database-down"></i></span>
+      <h2>Data backup</h2>
+      <p>Download portal records saved in this browser.</p>
+      <button class="btn btn-primary" id="exportStudentBackup"><i class="bi bi-download me-2"></i>Download data backup</button>
+    </section>
+  </div>
+  <footer class="page-footer"><span>&copy; 2026 StudNest &middot; IMS566 Individual Project</span></footer>
+</section>
+
+    </main>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="../assets/js/theme.js?v=1"></script>
+<script src="../assets/js/seed.js?v=10"></script>
+<script src="../assets/js/storage.js?v=10"></script>
+<script src="../assets/js/auth.js?v=10"></script>
+<script src="../assets/js/layout.js?v=10"></script>
+<script src="../assets/js/app.js?v=10"></script>
+</body>
+</html>

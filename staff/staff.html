@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StudNest student portal for classes, assignments and academic progress.">
+  <meta name="theme-color" content="#F7F6F2">
+  <title>StudNest | Staff & audit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/styles.css?v=10" rel="stylesheet">
+  <link href="../assets/css/theme-academic.css?v=10" rel="stylesheet">
+</head>
+<body data-page="staff">
+<div class="app-shell" id="appShell">
+  <aside class="sidebar" id="sidebar"></aside>
+  <div class="main-column">
+    <header class="topbar">
+      <button id="menuToggle" class="icon-button menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button>
+      <div class="breadcrumb-text"><span>Menu</span><i class="bi bi-chevron-right"></i><strong id="pageCrumb">Staff & audit</strong></div>
+      <div class="topbar-right"><span class="top-date" id="todayLabel"></span><div class="top-avatar" id="topAvatar">SN</div></div>
+    </header>
+    <main class="page-content">
+
+<section>
+  <div class="welcome-row">
+    <div><h1>Staff roles &amp; audit</h1><p class="muted">Assign portal roles and review catalogue changes.</p></div>
+    <button class="btn btn-primary" data-open-modal="staffModal"><i class="bi bi-person-plus me-2"></i>Add staff</button>
+  </div>
+  <section class="panel data-panel">
+    <div class="panel-heading"><div><h2>Staff directory</h2><p>Permission summaries are attached to each role.</p></div></div>
+    <div class="table-responsive">
+      <table class="table align-middle hub-table">
+        <thead><tr><th>Staff member</th><th>Email</th><th>Role</th><th>Permissions</th><th></th></tr></thead>
+        <tbody id="staffTable"></tbody>
+      </table>
+    </div>
+    <div class="empty-state d-none" id="staffEmpty"><i class="bi bi-people"></i><strong>No staff records yet</strong><span>Add staff to the directory.</span></div>
+  </section>
+  <section class="panel data-panel mt-3">
+    <div class="panel-heading"><div><h2>Catalogue audit history</h2><p>Subject creation, edits and removals.</p></div></div>
+    <div class="table-responsive">
+      <table class="table align-middle hub-table">
+        <thead><tr><th>When</th><th>Change</th><th>Subject</th><th>Details</th><th>By</th></tr></thead>
+        <tbody id="auditTable"></tbody>
+      </table>
+    </div>
+    <div class="empty-state d-none" id="auditEmpty"><i class="bi bi-clock-history"></i><strong>No catalogue changes yet</strong><span>Subject edits will appear here.</span></div>
+  </section>
+  <footer class="page-footer"><span>&copy; 2026 StudNest &middot; IMS566 Individual Project</span></footer>
+</section>
+
+    </main>
+  </div>
+</div>
+
+<div class="modal fade" id="staffModal" tabindex="-1" aria-labelledby="staffModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header"><h2 class="modal-title" id="staffModalLabel">Add staff member</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <form id="staffForm"><div class="modal-body">
+      <label for="staffName" class="form-label">Staff name</label>
+      <input id="staffName" class="form-control mb-3" required maxlength="80">
+      <label for="staffEmail" class="form-label">Staff email</label>
+      <input id="staffEmail" type="email" class="form-control mb-3" required placeholder="name@studnest.edu.my">
+      <label for="staffPassword" class="form-label">Login password</label>
+      <input id="staffPassword" type="password" class="form-control mb-3" required minlength="6" autocomplete="new-password">
+      <label for="staffRole" class="form-label">Portal role</label>
+      <select id="staffRole" class="form-select"><option>Administrator</option><option>Instructor</option><option>Advisor</option></select>
+    </div>
+    <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button><button type="submit" class="btn btn-primary">Add staff</button></div>
+    </form>
+  </div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="../assets/js/theme.js?v=1"></script>
+<script src="../assets/js/seed.js?v=10"></script>
+<script src="../assets/js/storage.js?v=10"></script>
+<script src="../assets/js/auth.js?v=10"></script>
+<script src="../assets/js/layout.js?v=10"></script>
+<script src="../assets/js/app.js?v=10"></script>
+</body>
+</html>
